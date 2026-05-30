@@ -1,0 +1,19 @@
+export function burbujaMenor(A: number[]): number[] {
+  const N = A.length;
+  
+  //Usaremos for para hacer el bucle de repasar en la lista  para revisar que todo se acomode bien
+  for (let i = 0; i < N - 1; i++) {
+    //Ahora se compraran los números en parejas, el de la izquierda con el de la derecha
+    for (let j = 0; j < N - i - 1; j++) {
+      //Comienzo del reordenamiento, si el numero de la izquierda es mas grande entonces se debe mover
+      if (A[j] > A[j + 1]) {
+        //Usamos una variable para cambiar los valores de lugar al otro sin eliminarlo.
+        let temporal = A[j];
+        A[j] = A[j + 1];
+        A[j + 1] = temporal;
+        //Asi el numero mas grande va avanzando casillas hacia el final de la lista.
+      }
+    }
+  }
+  return A;
+}

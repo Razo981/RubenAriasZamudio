@@ -1,0 +1,9 @@
+Function holamundo (edad: number): string { 
+    let edad:number = 38;
+    return "¡Hola mundo!";
+
+}
+    console.log("¡Hola, mundo  tengo" $(edad)"años"));
+
+
+
